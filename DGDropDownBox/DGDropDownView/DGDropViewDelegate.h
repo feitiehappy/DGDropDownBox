@@ -13,8 +13,8 @@
 #define SCREEN_H [UIScreen mainScreen].bounds.size.height
 
 typedef enum : NSUInteger {
-    DROP_DIRECTION_DOWN   =0,
-    DROP_DIRECTION_UP
+    DROP_DIRECTION_DOWN   =0,//下拉框
+    DROP_DIRECTION_UP //上拉框
 } DROP_DIRECTION;
 
 typedef enum : NSUInteger {
