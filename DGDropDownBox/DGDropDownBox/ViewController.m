@@ -46,6 +46,10 @@
     return self.dataArray[index];
 }
 
+- (void)dropViewDownBox:(UIView *)dropdown selectedItem:(NSInteger)index{
+    NSLog(@"%ld",index);
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

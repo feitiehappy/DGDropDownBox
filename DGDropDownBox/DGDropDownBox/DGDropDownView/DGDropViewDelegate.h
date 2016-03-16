@@ -25,7 +25,16 @@ typedef enum : NSUInteger {
 
 @protocol dropViewBoxDelegate <NSObject>
 
-
+@optional
+/**
+ *  @author Yan deguang, 16-03-16 15:03:23
+ *
+ *  选择按钮
+ *
+ *  @param dropdown self
+ *  @param index    按钮tag
+ */
+- (void) dropViewDownBox: (UIView *)dropdown selectedItem:(NSInteger)index;
 
 @end
 

@@ -58,7 +58,7 @@ DGDropBoxView *dropView = nil;
         
         
         
-        _midView.frame = CGRectMake(rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height + 10, midView_W + 10, midView_H);
+        _midView.frame = CGRectMake(rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height + 10, midView_W + 10, midView_H + 1);
         _midView.center = CGPointMake(rect.origin.x + rect.size.width/2, _midView.center.y);
         _midView.backgroundColor = [UIColor redColor];
         
@@ -79,7 +79,7 @@ DGDropBoxView *dropView = nil;
         if(self.dataSource && [self.dataSource respondsToSelector:@selector(dropView:itemTitleText:)]){
             UIButton *itemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
             CGSize size = [self itemSize:i];
-            itemBtn.frame = CGRectMake(5, i * (size.height+1), size.width, size.height);
+            itemBtn.frame = CGRectMake(5, 1 + i * (size.height+1), size.width, size.height);
             
             itemTitle = [_dataSource dropView:dropView itemTitleText:i];
             [itemBtn setTitle:itemTitle forState:UIControlStateNormal];
@@ -87,9 +87,18 @@ DGDropBoxView *dropView = nil;
             
             itemBtn.backgroundColor = [UIColor greenColor];
             [midView addSubview:itemBtn];
+            
+            [itemBtn addTarget:self action:@selector(itemClick:) forControlEvents:UIControlEventTouchUpInside];
         }
         
         
+    }
+}
+
+- (void)itemClick:(UIButton *)btn{
+    if(self.delegate && [self.delegate respondsToSelector:@selector(dropViewDownBox:selectedItem:)]){
+        [_delegate dropViewDownBox:dropView selectedItem:btn.tag];
+        [self dismiss];
     }
 }
 
@@ -134,10 +143,14 @@ DGDropBoxView *dropView = nil;
 }
 
 - (void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self dismiss];
+    
+}
+
+- (void) dismiss{
     if(dropView){
         [dropView removeFromSuperview];
     }
 }
-
 
 @end
