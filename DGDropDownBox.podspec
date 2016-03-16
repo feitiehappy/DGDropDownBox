@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "WZMarqueeView"
+  s.name         = "DGDropDownBox"
   s.version      = "0.0.1"
-  s.summary      = "A short description of WZMarqueeView."
+  s.summary      = "A short description of DGDropDownBox."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                    DESC
 
-  s.homepage     = "http://EXAMPLE/WZMarqueeView"
+  s.homepage     = "http://EXAMPLE/DGDropDownBox"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/WZMarqueeView.git", :tag => "0.0.1" }
+  s.source       = { :git => "http://EXAMPLE/DGDropDownBox.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
