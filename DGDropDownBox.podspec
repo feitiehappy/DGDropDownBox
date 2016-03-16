@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   # s.osx.deployment_target = '10.7'
   s.requires_arc = true
 
-  s.source_files = 'DGDropBoxView/DGDropBoxView*.{h,m}','DGDropBoxView/DGDropViewDelegate.h'
+  s.source_files = 'DGDropDownView/DGDropBoxView*.{h,m}','DGDropDownView/DGDropViewDelegate.h'
   #s.resources = "XYDropDownMenu/Images/*.png"
   s.frameworks = 'Foundation', 'UIKit'
 
