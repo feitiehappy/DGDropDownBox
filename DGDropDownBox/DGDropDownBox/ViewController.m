@@ -46,6 +46,10 @@
     return self.dataArray[index];
 }
 
+- (DROP_DIRECTION)dropViewOrientation{
+    return DROP_DIRECTION_UP;
+}
+
 - (void)dropViewDownBox:(UIView *)dropdown selectedItem:(NSInteger)index{
     NSLog(@"%ld",index);
 }

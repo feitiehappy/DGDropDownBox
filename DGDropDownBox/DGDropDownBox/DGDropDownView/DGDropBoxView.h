@@ -16,6 +16,7 @@
 @property (nonatomic, weak, nullable) id <dropViewBoxDelegate> delegate;
 
 @property (nonatomic, assign) DROPDOWNVIEWTYPE dropdownViewType;
+@property (nonatomic, assign) DROP_DIRECTION direction;
 
 /**
  *  @author Yan deguang, 16-03-15 16:03:48

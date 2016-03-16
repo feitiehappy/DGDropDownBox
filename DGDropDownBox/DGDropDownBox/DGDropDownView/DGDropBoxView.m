@@ -39,7 +39,7 @@ DGDropBoxView *dropView = nil;
     CGRect rect = [self.temporaryView convertRect:self.temporaryView.bounds toView:nil];
     if(!_midView){
         _midView = [[UIView alloc] init];
-        
+        _midView.backgroundColor = [UIColor whiteColor];
         NSInteger count = 0;
         if(self.dataSource && [self.dataSource respondsToSelector:@selector(numberDropViewItems)]){
             count = [_dataSource numberDropViewItems];
@@ -56,18 +56,22 @@ DGDropBoxView *dropView = nil;
             midView_W = size.width > midView_W? size.width: midView_W;
         }
         
-        
-        
-        _midView.frame = CGRectMake(rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height + 10, midView_W + 10, midView_H + 1);
-        _midView.center = CGPointMake(rect.origin.x + rect.size.width/2, _midView.center.y);
-        _midView.backgroundColor = [UIColor redColor];
-        
-        
-        //三角形
-        
-        
-        [self addTriangleLayerWithFrame:CGRectMake(rect.origin.x + rect.size.width/2 - 5, rect.origin.y + rect.size.height, 10, 10) positive:YES];
-        
+        if (self.dataSource && [self.dataSource respondsToSelector:@selector(dropViewOrientation)]){
+            self.direction = [self.dataSource dropViewOrientation];
+        }
+        if(self.direction == DROP_DIRECTION_DOWN){
+            _midView.frame = CGRectMake(rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height + 10, midView_W + 10, midView_H + 1);
+            _midView.center = CGPointMake(rect.origin.x + rect.size.width/2, _midView.center.y);
+            
+            //三角形
+            [self addTriangleLayerWithFrame:CGRectMake(rect.origin.x + rect.size.width/2 - 5, rect.origin.y + rect.size.height, 10, 10) positive:YES];
+        }else{
+            _midView.frame = CGRectMake(rect.origin.x + rect.size.width/2, rect.origin.y - 10 - midView_H - 1, midView_W + 10, midView_H + 1);
+            _midView.center = CGPointMake(rect.origin.x + rect.size.width/2, _midView.center.y);
+            
+            //三角形
+            [self addTriangleLayerWithFrame:CGRectMake(rect.origin.x + rect.size.width/2 - 5, rect.origin.y - 10, 10, 10) positive: NO];
+        }
         [self addItemsToMidView:_midView andCount:count];
     }
     return _midView;
@@ -83,9 +87,10 @@ DGDropBoxView *dropView = nil;
             
             itemTitle = [_dataSource dropView:dropView itemTitleText:i];
             [itemBtn setTitle:itemTitle forState:UIControlStateNormal];
+            [itemBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             itemBtn.tag = i;
             
-            itemBtn.backgroundColor = [UIColor greenColor];
+            itemBtn.backgroundColor = [UIColor clearColor];
             [midView addSubview:itemBtn];
             
             [itemBtn addTarget:self action:@selector(itemClick:) forControlEvents:UIControlEventTouchUpInside];
