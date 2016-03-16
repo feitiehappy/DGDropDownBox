@@ -15,7 +15,7 @@
 		EB16A98F1C97C5B1007E47AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB16A98D1C97C5B1007E47AD /* LaunchScreen.storyboard */; };
 		EB16A99A1C97C5B1007E47AD /* DGDropDownBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB16A9991C97C5B1007E47AD /* DGDropDownBoxTests.m */; };
 		EB16A9A51C97C5B1007E47AD /* DGDropDownBoxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB16A9A41C97C5B1007E47AD /* DGDropDownBoxUITests.m */; };
-		EB16A9B91C97DDF9007E47AD /* DGDropBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB16A9B81C97DDF9007E47AD /* DGDropBoxView.m */; };
+		EB595AF61C99564100F1F19F /* DGDropBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB595AF41C99564100F1F19F /* DGDropBoxView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +52,9 @@
 		EB16A9A01C97C5B1007E47AD /* DGDropDownBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DGDropDownBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB16A9A41C97C5B1007E47AD /* DGDropDownBoxUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DGDropDownBoxUITests.m; sourceTree = "<group>"; };
 		EB16A9A61C97C5B1007E47AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB16A9B71C97DDF9007E47AD /* DGDropBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGDropBoxView.h; sourceTree = "<group>"; };
-		EB16A9B81C97DDF9007E47AD /* DGDropBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGDropBoxView.m; sourceTree = "<group>"; };
-		EB16A9BA1C97E46D007E47AD /* DGDropViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DGDropViewDelegate.h; sourceTree = "<group>"; };
+		EB595AF31C99564100F1F19F /* DGDropBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGDropBoxView.h; sourceTree = "<group>"; };
+		EB595AF41C99564100F1F19F /* DGDropBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGDropBoxView.m; sourceTree = "<group>"; };
+		EB595AF51C99564100F1F19F /* DGDropViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGDropViewDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 		EB16A97E1C97C5B0007E47AD /* DGDropDownBox */ = {
 			isa = PBXGroup;
 			children = (
-				EB16A9B61C97DDF9007E47AD /* DGDropDownView */,
+				EB595AF21C99564100F1F19F /* DGDropDownView */,
 				EB16A9821C97C5B0007E47AD /* AppDelegate.h */,
 				EB16A9831C97C5B0007E47AD /* AppDelegate.m */,
 				EB16A9851C97C5B0007E47AD /* ViewController.h */,
@@ -145,12 +145,12 @@
 			path = DGDropDownBoxUITests;
 			sourceTree = "<group>";
 		};
-		EB16A9B61C97DDF9007E47AD /* DGDropDownView */ = {
+		EB595AF21C99564100F1F19F /* DGDropDownView */ = {
 			isa = PBXGroup;
 			children = (
-				EB16A9B71C97DDF9007E47AD /* DGDropBoxView.h */,
-				EB16A9B81C97DDF9007E47AD /* DGDropBoxView.m */,
-				EB16A9BA1C97E46D007E47AD /* DGDropViewDelegate.h */,
+				EB595AF31C99564100F1F19F /* DGDropBoxView.h */,
+				EB595AF41C99564100F1F19F /* DGDropBoxView.m */,
+				EB595AF51C99564100F1F19F /* DGDropViewDelegate.h */,
 			);
 			path = DGDropDownView;
 			sourceTree = "<group>";
@@ -287,7 +287,7 @@
 			files = (
 				EB16A9871C97C5B0007E47AD /* ViewController.m in Sources */,
 				EB16A9841C97C5B0007E47AD /* AppDelegate.m in Sources */,
-				EB16A9B91C97DDF9007E47AD /* DGDropBoxView.m in Sources */,
+				EB595AF61C99564100F1F19F /* DGDropBoxView.m in Sources */,
 				EB16A9811C97C5B0007E47AD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +514,7 @@
 				EB16A9AB1C97C5B1007E47AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB16A9AC1C97C5B1007E47AD /* Build configuration list for PBXNativeTarget "DGDropDownBoxTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +523,7 @@
 				EB16A9AE1C97C5B1007E47AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB16A9AF1C97C5B1007E47AD /* Build configuration list for PBXNativeTarget "DGDropDownBoxUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +532,7 @@
 				EB16A9B11C97C5B1007E47AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
