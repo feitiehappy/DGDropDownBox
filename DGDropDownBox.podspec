@@ -17,15 +17,14 @@ Pod::Spec.new do |s|
 
   s.name         = "DGDropDownBox"
   s.version      = "1.0.2"
-  s.summary      = "A short description of DGDropDownBox."
+  s.summary      = "A dropDownMenu on iOS."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
+  s.description  = "A dropDownMenu, which implement by Objective-C"
 
   s.homepage     = "https://github.com/yandeguangzy/DGDropDownBox"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -38,8 +37,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
- # s.license      = "MIT"
-   s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = 'MIT'
+  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -52,7 +51,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "yandeguang" => "754199572@qq.com" }
+  s.author             = { "yandeguangzy" => "13311171405@163.com" }
   # Or just: s.author    = "yandeguang"
   # s.authors            = { "yandeguang" => "754199572@qq.com" }
   # s.social_media_url   = "http://twitter.com/yandeguang"
@@ -64,7 +63,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-   s.platform     = :ios, "7.0"
+   s.platform     = :ios, '7.0'
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -79,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/yandeguangzy/DGDropDownBox.git", :tag => "1.0.1" }
+  s.source       = { :git => "https://github.com/yandeguangzy/DGDropDownBox.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "DGDropDownView/DGDropViewDelegate.h", "DGDropDownView/DGDropBoxView.{h,m}"
+  s.source_files  = 'DGDropDownView/DGDropBoxView*.{h,m}','DGDropDownView/DGDropViewDelegate.h'
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -117,7 +116,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+   s.frameworks = 'Foundation', 'UIKit'
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
